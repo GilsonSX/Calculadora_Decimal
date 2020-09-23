@@ -1,0 +1,175 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <input
+          type="text"
+          [(ngModel)]="resultado"
+          class="form-control"
+          readonly="readonly"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('9')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        9
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('8')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        8
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('7')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        7
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('*')"
+        type="button"
+        class="btn btn-dark btn-lg btn-block"
+      >
+        *
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <button
+        type="button"
+        (click)="montarResultado('6')"
+        class="btn btn-info btn-lg btn-block"
+      >
+        6
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        type="button"
+        (click)="montarResultado('5')"
+        class="btn btn-info btn-lg btn-block"
+      >
+        5
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        type="button"
+        (click)="montarResultado('4')"
+        class="btn btn-info btn-lg btn-block"
+      >
+        4
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        type="button"
+        (click)="montarResultado('/')"
+        class="btn btn-dark btn-lg btn-block"
+      >
+        /
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('3')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        3
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('2')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        2
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('1')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        1
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('-')"
+        type="button"
+        class="btn btn-dark btn-lg btn-block"
+      >
+        -
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('0')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        0
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="limpar()"
+        type="button"
+        class="btn btn-danger btn-lg btn-block"
+      >
+        CE
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="finalizar()"
+        type="button"
+        class="btn btn-success btn-lg btn-block"
+      >
+        =
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('+')"
+        type="button"
+        class="btn btn-dark btn-lg btn-block"
+      >
+        +
+      </button>
+    </div>
+  </div>
+</div>

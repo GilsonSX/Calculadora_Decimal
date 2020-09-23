@@ -1,0 +1,17 @@
+.container {
+  font-family: "Roboto", sans-serif;
+  background-image: url(https://i.cbc.ca/1.3756818.1558464528!/fileImage/httpImage/lightning-storm-weather-electrical-ottawa-tulip-festival.jpg);
+  padding: 20px 40px 40px;
+  width: 500px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.form-control {
+  font-size: 24px;
+  color: black;
+}
