@@ -9,6 +9,7 @@
       <div class="form-group">
         <input
           type="text"
+          placeholder="00000000"
           [(ngModel)]="resultado"
           class="form-control"
           readonly="readonly"
@@ -47,7 +48,7 @@
     </div>
     <div class="col-md-3">
       <button
-        (click)="montarResultado('*')"
+        (click)="montarResultado(' * ')"
         type="button"
         class="btn btn-dark btn-lg btn-block"
       >
@@ -87,7 +88,7 @@
     <div class="col-md-3">
       <button
         type="button"
-        (click)="montarResultado('/')"
+        (click)="montarResultado(' / ')"
         class="btn btn-dark btn-lg btn-block"
       >
         /
@@ -125,7 +126,7 @@
     </div>
     <div class="col-md-3">
       <button
-        (click)="montarResultado('-')"
+        (click)="montarResultado(' - ')"
         type="button"
         class="btn btn-dark btn-lg btn-block"
       >
@@ -137,20 +138,20 @@
   <div class="row">
     <div class="col-md-3">
       <button
-        (click)="montarResultado('0')"
-        type="button"
-        class="btn btn-info btn-lg btn-block"
-      >
-        0
-      </button>
-    </div>
-    <div class="col-md-3">
-      <button
         (click)="limpar()"
         type="button"
         class="btn btn-danger btn-lg btn-block"
       >
         CE
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        (click)="montarResultado('0')"
+        type="button"
+        class="btn btn-info btn-lg btn-block"
+      >
+        0
       </button>
     </div>
     <div class="col-md-3">
@@ -164,7 +165,7 @@
     </div>
     <div class="col-md-3">
       <button
-        (click)="montarResultado('+')"
+        (click)="montarResultado(' + ')"
         type="button"
         class="btn btn-dark btn-lg btn-block"
       >
