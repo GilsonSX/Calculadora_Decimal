@@ -13,7 +13,7 @@ export class TecladoComponent implements OnInit {
   ngOnInit() {}
 
   //verifica se o caractere passado é um operador
-  public ehOperador(caractere: string): boolean {
+  public operador(caractere: string): boolean {
     if (
       caractere == "+" ||
       caractere == "-" ||
@@ -27,7 +27,7 @@ export class TecladoComponent implements OnInit {
   }
 
   //verifica se o caractere passado é zero
-  public ehZero(caractere: string): boolean {
+  public zero(caractere: string): boolean {
     if (caractere == "0") {
       return true;
     } else {
@@ -37,10 +37,10 @@ export class TecladoComponent implements OnInit {
 
   //verifica se o último caractere da expressão é um operador
   //e o caractere passado é zero
-  public ehZeroDepoisDeOperador(caractere: string, expressao: string): boolean {
+  public zeroOperador(caractere: string, expressao: string): boolean {
     if (
-      this.ehOperador(expressao.charAt(expressao.length - 1)) &&
-      this.ehZero(caractere)
+      this.operador(expressao.charAt(expressao.length - 1)) &&
+      this.zero(caractere)
     ) {
       return true;
     } else {
@@ -50,13 +50,10 @@ export class TecladoComponent implements OnInit {
 
   //verifica se o último caractere da expressão é um operador
   //e o caractere passado é operador
-  public ehOperadorDepoisDeOperador(
-    caractere: string,
-    expressao: string
-  ): boolean {
+  public operadorOperador(caractere: string, expressao: string): boolean {
     if (
-      this.ehOperador(expressao.charAt(expressao.length - 1)) &&
-      this.ehOperador(caractere)
+      this.operador(expressao.charAt(expressao.length - 1)) &&
+      this.operador(caractere)
     ) {
       return true;
     } else {
@@ -65,16 +62,16 @@ export class TecladoComponent implements OnInit {
   }
 
   //verifica se a expressão é valida
-  public ehValidaExpressao(caractere: string, expressao: string): boolean {
+  public validaExpressao(caractere: string, expressao: string): boolean {
     let valido: boolean = true;
     if (expressao.length == 0) {
-      if (this.ehOperador(caractere) || this.ehZero(caractere)) {
+      if (this.operador(caractere) || this.zero(caractere)) {
         valido = false;
       }
     } else {
-      if (this.ehZeroDepoisDeOperador(caractere, expressao)) {
+      if (this.zeroOperador(caractere, expressao)) {
         valido = false;
-      } else if (this.ehOperadorDepoisDeOperador(caractere, expressao)) {
+      } else if (this.operadorOperador(caractere, expressao)) {
         valido = false;
       }
     }
@@ -82,7 +79,7 @@ export class TecladoComponent implements OnInit {
   }
 
   public montarResultado(digito: string): void {
-    if (this.ehValidaExpressao(digito, this.resultado)) {
+    if (this.validaExpressao(digito, this.resultado)) {
       this.resultado += digito;
     }
   }
