@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calculadora';
+  public criadoPor:string = 'Jessica Barbosa';
+  public ano:string = '2020';
 }
